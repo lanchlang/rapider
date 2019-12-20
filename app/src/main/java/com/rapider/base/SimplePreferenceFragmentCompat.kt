@@ -1,5 +1,8 @@
 package com.rapider.base
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -52,5 +55,12 @@ abstract class SimplePreferenceFragmentCompat: PreferenceFragmentCompat(),BackHa
             ViewCompat.setTranslationZ(view!!, 0f)
         }
         return super.onCreateAnimation(transit, enter, nextAnim)
+    }
+
+    override fun setDivider(divider: Drawable?) {
+        super.setDivider(ColorDrawable(Color.TRANSPARENT))
+    }
+    override fun setDividerHeight(height: Int) {
+        super.setDividerHeight(0)
     }
 }

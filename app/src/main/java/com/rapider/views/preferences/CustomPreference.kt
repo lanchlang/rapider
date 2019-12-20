@@ -15,6 +15,8 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.rapider.R
+import com.rapider.extensions.hide
+import com.rapider.extensions.show
 
 
 class CustomPreference : Preference {
@@ -41,10 +43,10 @@ class CustomPreference : Preference {
     }
 
     private fun init(context: Context, attrs: AttributeSet) {
-        context.obtainStyledAttributes(attrs, R.styleable.CustomColorPreference).apply {
-            titleColor = getColor(R.styleable.CustomColorPreference_titleColor,
+        context.obtainStyledAttributes(attrs, R.styleable.CustomPreference).apply {
+            titleColor = getColor(R.styleable.CustomPreference_titleColor,
                 ContextCompat.getColor(context, R.color.placeholder_grey))
-            summaryColor = getColor(R.styleable.CustomColorPreference_summaryColor,
+            summaryColor = getColor(R.styleable.CustomPreference_summaryColor,
                 ContextCompat.getColor(context, R.color.placeholder_grey))
             startIcon=getDrawable(R.styleable.CustomPreference_startIcon)
             endIcon=getDrawable(R.styleable.CustomPreference_endIcon)
@@ -68,13 +70,31 @@ class CustomPreference : Preference {
     override fun onBindViewHolder(holder: PreferenceViewHolder?) {
         super.onBindViewHolder(holder)
         holder?.let {
+
             val containerView=it.itemView
-            val title = containerView.findViewById(android.R.id.title) as TextView
-            val summary = containerView.findViewById(android.R.id.summary) as TextView
-            title.setTextColor(titleColor)
-            summary.setTextColor(summaryColor)
+            val titleTv = containerView.findViewById(android.R.id.title) as TextView
+            if (title.isNullOrBlank()){
+                titleTv.hide()
+            }else{
+                titleTv.show()
+            }
+            val summaryTv = containerView.findViewById(android.R.id.summary) as TextView
+            if (summary.isNullOrBlank()){
+                summaryTv.hide()
+            }else{
+                summaryTv.show()
+            }
+            titleTv.setTextColor(titleColor)
+            summaryTv.setTextColor(summaryColor)
             //
-            (containerView.findViewById(R.id.start_icon) as? AppCompatImageView)?.setImageDrawable(startIcon)
+            (containerView.findViewById(R.id.start_icon) as? AppCompatImageView)?.apply {
+                if (startIcon==null){
+                    this.hide()
+                }else{
+                    this.show()
+                    setImageDrawable(startIcon)
+                }
+            }
             //如果需要设置textStartMargin
             if (textStartMargin>=0f){
                 containerView.findViewById<View>(R.id.text_container)?.apply {
@@ -83,7 +103,14 @@ class CustomPreference : Preference {
                     }
                 }
             }
-            (containerView.findViewById(R.id.end_icon) as? AppCompatImageView)?.setImageDrawable(endIcon)
+            (containerView.findViewById(R.id.end_icon) as? AppCompatImageView)?.apply {
+                if (endIcon==null){
+                    this.hide()
+                }else{
+                    this.show()
+                    setImageDrawable(endIcon)
+                }
+            }
             //设置长按事件
             containerView.apply {
                 isLongClickable=true
@@ -106,6 +133,14 @@ class CustomPreference : Preference {
                     isFocusable=true
                     isLongClickable=true
                     setOnLongClickListener(entry.value)
+                }
+            }
+            containerView.findViewById<View>(R.id.divider)?.apply{
+                if (showDivider){
+                    this.show()
+                    this.setBackgroundColor(dividerColor)
+                }else{
+                    this.hide()
                 }
             }
         }

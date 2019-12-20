@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
 import android.widget.SeekBar
+import android.widget.TextView
 import androidx.appcompat.widget.AppCompatSeekBar
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.preference.PreferenceViewHolder
@@ -15,7 +16,7 @@ class FontSizeItemPreference:SeekBarPreference{
     var subTitleTv:AppCompatTextView?=null
     var seekbarValue:AppCompatTextView?=null
     var seekbar:AppCompatSeekBar?=null
-    var defaultSeekBarValue:String?=""
+    var defaultSeekBarValue:String?="kkkkkk"
     var defaultTextSize:Float=0f
     constructor(context: Context,attributeSet: AttributeSet):this(context,attributeSet,0)
     constructor(context: Context,attributeSet: AttributeSet,defStyle:Int):super(context,attributeSet,defStyle){
@@ -34,6 +35,7 @@ class FontSizeItemPreference:SeekBarPreference{
         seekbarValue?.apply {
             text=defaultSeekBarValue
         }
+
         seekbar=holder?.itemView?.findViewById(R.id.seekbar)
         seekbar?.apply {
             if (Build.VERSION.SDK_INT>Build.VERSION_CODES.O){

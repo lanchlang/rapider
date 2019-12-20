@@ -5,5 +5,14 @@
 
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <com.rapider.views.preferences.CustomPreference
+        android:title="@string/font_size"
+        android:summary="@string/font_size"
+        app:textStartMargin="@dimen/normalMargin"
+        app:endIcon="@drawable/ic_back_24"
+        />
+    <com.rapider.views.preferences.FontSizeItemPreference
+        android:title="@string/font_size"
+        android:summary="@string/font_size_sample"
+        />
 </androidx.preference.PreferenceScreen>

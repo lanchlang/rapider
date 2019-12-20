@@ -20,6 +20,11 @@
 		<item name="android:textSize">@dimen/subTitleTextSize</item>
 		<item name="android:textStyle">normal</item>
 	</style>
+	<style name="fontSize">
+		<item name="android:textColor">@color/textColorTitle</item>
+		<item name="android:textSize">@dimen/defaultFontSize</item>
+		<item name="android:textStyle">normal</item>
+	</style>
 	<style name="customSwitch" parent="Theme.AppCompat.Light">
 		<!-- active thumb & track color (30% transparency) -->
 		<item name="colorControlActivated">@color/textColorPrimary</item>

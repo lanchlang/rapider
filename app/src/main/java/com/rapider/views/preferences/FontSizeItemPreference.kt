@@ -19,7 +19,7 @@ class FontSizeItemPreference:SeekBarPreference{
     var defaultTextSize:Float=0f
     constructor(context: Context,attributeSet: AttributeSet):this(context,attributeSet,0)
     constructor(context: Context,attributeSet: AttributeSet,defStyle:Int):super(context,attributeSet,defStyle){
-        //TODO:layoutResource= R.layout.pref_font_size_item
+       layoutResource= R.layout.pref_font_size_item
     }
 
 
@@ -30,7 +30,7 @@ class FontSizeItemPreference:SeekBarPreference{
             defaultTextSize=textSize/(context.resources.displayMetrics.scaledDensity)
             textSize = defaultTextSize*((getPersistedInt(20)).toFloat().div(20))
         }
-        //TODO:seekbarValue=holder?.itemView?.findViewById(R.id.seekbar_value_custom)
+        seekbarValue=holder?.itemView?.findViewById(R.id.seekbar_value_custom)
         seekbarValue?.apply {
             text=defaultSeekBarValue
         }

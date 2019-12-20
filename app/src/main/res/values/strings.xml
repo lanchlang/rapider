@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources>
+    <string name="app_name">Reference Browser</string>
+
+    <!-- Text shown in the toolbar if it is empty -->
+    <string name="toolbar_hint">Search or enter address</string>
+
+    <!-- Menu option on the toolbar to open a new tab-->
+    <string name="menu_action_add_tab">Add New Tab</string>
+
+    <!-- Menu option on the toolbar to close all tabs-->
+    <string name="menu_action_close_tabs">Close All Tabs</string>
+    <string name="menu_action_close_tabs_private">Close Private Tabs</string>
+
+    <!-- Preference summary for settings related sign in -->
+    <string name="preferences_sign_in_summary">Sync your history</string>
+
+    <!-- Preference summary for pairing sign in -->
+    <string name="preferences_pair_sign_in_summary">Pair with Firefox Desktop</string>
+
+    <!-- Preference summary for settings related to send telemetry data -->
+    <string name="preferences_use_telemetry_summary">Send usage data</string>
+
+    <!-- Preference for settings related to changing the default browser -->
+    <string name="preferences_make_default_browser">Make default browser</string>
+
+    <!-- Preference enables sync for history -->
+    <string name="preferences_sync_history">History</string>
+
+    <!-- Preference enabling remote debugging -->
+    <string name="preferences_remote_debugging">Remote debugging via USB</string>
+
+    <!-- Preference for enabling tracking protection in normal mode -->
+    <string name="preferences_tracking_protection_normal">Enable in Normal Browsing Mode</string>
+
+    <!-- Preference for enabling tracking protection in private mode -->
+    <string name="preferences_tracking_protection_private">Enable in Private Browsing Mode</string>
+
+    <!-- Preference about page -->
+    <string name="preferences_about_page">About Reference Browser</string>
+
+    <!-- Preference for signing in -->
+    <string name="sign_in">Sign in</string>
+
+    <!-- Preference for signing in -->
+    <string name="pair_sign_in">Sign in with a QR code</string>
+
+    <!-- Preference for settings related to the signed in Firefox Account -->
+    <string name="firefox_account">Firefox Account</string>
+
+    <!-- Preference for signing out -->
+    <string name="sign_out">Sign out</string>
+
+    <!-- Preference for syncing immediately -->
+    <string name="sync_now">Sync now</string>
+
+    <!-- Preference for syncing immediately -->
+    <string name="syncing">Syncing</string>
+
+    <!-- Preference summary indicating that sync failed along with last time it succeeded -->
+    <string name="preferences_sync_failed_summary">Sync failed. Last success: %s</string>
+
+    <!-- Preference summary showing never synced -->
+    <string name="preferences_sync_failed_never_synced_summary">Sync failed. Last synced: never</string>
+
+    <!-- Preference summary showing last time synced -->
+    <string name="preferences_sync_last_synced_summary">Last synced: %s</string>
+
+    <!-- Preference summary showing never synced -->
+    <string name="preferences_sync_never_synced_summary">Last synced: never</string>
+
+    <!-- Preference for privacy -->
+    <string name="privacy">Privacy</string>
+
+    <!-- Preference summary for privacy -->
+    <string name="preferences_privacy_summary">Tracking, cookies, data choices</string>
+
+    <!-- Preference category for sync settings -->
+    <string name="sync_category">Choose what to sync</string>
+
+    <!-- Preference category for developer tools -->
+    <string name="developer_tools_category">Developer tools</string>
+
+    <!-- Preference for settings related turn on telemetry data-->
+    <string name="use_telemetry">Use Telemetry</string>
+
+    <!-- Preference category for Mozilla about/legal etc. -->
+    <string name="mozilla_category">Mozilla</string>
+
+    <!-- Preference category for tracking protection -->
+    <string name="tracker_category">Tracking Protection</string>
+
+    <!-- Preference category for data choices e.g. usage data -->
+    <string name="data_choices_category">Data Choices</string>
+
+    <!-- Menu option on the toolbar that takes you to settings page-->
+    <string name="settings">Settings</string>
+
+    <!-- Menu option on the toolbar that takes you to account settings page-->
+    <string name="account_settings">Account Settings</string>
+
+    <!-- Menu option on the toolbar that takes you to privacy settings page-->
+    <string name="privacy_settings">隐私设置</string>
+
+    <!-- Menu option on the toolbar that takes you to pairing QR code page-->
+    <string name="pair_preferences">Pairing</string>
+    <string name="pair_instructions">Open firefox.com/pair in Firefox Desktop for your pairing code</string>
+
+    <!-- Snackbar message when a non fatal crash happen-->
+    <string name="crash_report_non_fatal_message">Sorry. We crashed</string>
+
+    <!-- Snackbar action button when a non fatal crash happen-->
+    <string name="crash_report_non_fatal_action">Report</string>
+
+    <!-- Private Browsing -->
+    <string name="private_browsing_title">Private Browsing</string>
+    <string name="private_browsing_body"><![CDATA[
+<h1>Private Browsing</h1>
+<p>When you browse in a Private Window, Reference Browser <strong>does not save</strong>:</p>
+<ul class="two-column">
+    <li>visited pages</li>
+    <li>searches</li>
+    <li>cookies</li>
+    <li>temporary files</li>
+</ul>
+<p>Private Browsing <strong>doesn\'t make you anonymous</strong> on the Internet. Your employer or Internet service provider can still know what page you visit.</p>
+<p class="about-info">Learn more about <a id="learnMore">Private Browsing</a>.</p>
+     ]]></string>
+
+    <!-- Title of the notification shown on app startup informing about the data policy -->
+    <string name="datareporting_notification_title">Reference Browser</string>
+
+    <!-- Summary of the notification shown on app startup informing about the data policy -->
+    <string name="datareporting_notification_summary">To improve your experience, Reference Browser automatically sends some information to Mozilla.</string>
+    
+    <string name="default_notification_channel">Browser</string>
+
+    <!-- About content -->
+    <string name="about_content"><![CDATA[
+<p>%1$s puts you in control.</p>
+<p>Use it as a reference to:
+    <br>&bull; Learn how to build your own browser.
+    <br>&bull; Contribute to making it easier to build browsers.
+    <br>&bull; File bug reports!
+</p>
+<p>%1$s is produced by Mozilla. Our mission is to foster a healthy, open Internet.<br/>
+    ]]></string>
+
+    <string name="menu_share_with">Share with…</string>
+    <string name="toast_copied">Copied!</string>
+    <string name="search_engine">搜索引擎</string>
+    <string name="normal_tab_page">普通标签页</string>
+    <string name="google">Google</string>
+    <string name="private_tab_page">隐私标签页</string>
+    <string name="password">密码</string>
+    <string name="basic">基本</string>
+    <string name="notification">通知</string>
+    <string name="home_page">主页</string>
+    <string name="enable">启用</string>
+    <string name="guide_page">欢迎之旅</string>
+    <string name="appearance">外观</string>
+    <string name="display">显示</string>
+    <string name="control">控件</string>
+    <string name="play_on_background">后台视频播放</string>
+    <string name="close_all_tabs_when_quit">退出时关闭标签页</string>
+    <string name="advance">高级</string>
+    <string name="reward">奖励</string>
+    <string name="sync">同步</string>
+    <string name="accessibility">无障碍</string>
+    <string name="site_settings">网站设置</string>
+    <string name="language">语言</string>
+    <string name="download_content">下载内容</string>
+    <string name="about_browser">关于Stream</string>
+    <string name="used_search_engine">最近使用过的搜索引擎</string>
+    <string name="used_search_engine_key">used_search_engine_key</string>
+    <string name="default_search_engine_key">default_search_engine_key</string>
+
+    <string name="mozac_feature_customtabs_exit_button">返回之前的应用</string>
+    <string name="mozac_feature_customtabs_share_link">分享链接</string>
+
+
+    <!-- Default shortcut label used if website has no title -->
+    <string name="mozac_feature_pwa_default_shortcut_label">Website</string>
+
+    <!-- Name of the "notification channel" used for displaying site controls notification. See https://developer.android.com/training/notify-user/channels -->
+    <string name="mozac_feature_pwa_site_controls_notification_channel">Full screen site controls</string>
+    <!-- Text shown on the second row of the site controls notification. -->
+    <string name="mozac_feature_pwa_site_controls_notification_text">Tap to copy the URL for this app</string>
+    <!-- Refresh button in site controls notification. -->
+    <string name="mozac_feature_pwa_site_controls_refresh">Refresh</string>
+    <!-- Toast displayed when the website URL is copied. -->
+    <string name="mozac_feature_pwa_copy_success">URL copied.</string>
+    <string name="default_search_engine_category_key">default_search_engine_category_key</string>
+    <string name="used_search_engine_category_key">used_search_engine_category_key</string>
+    <string name="default_pref_screen_key">default_pref_screen_key</string>
+    <string name="search">搜索</string>
+    <string name="show_search_advice">显示搜索建议</string>
+    <string name="pref_key_show_search_advice">pref_key_show_search_advice</string>
+    <string name="pref_key_show_clip_board">pref_key_show_clip_board</string>
+    <string name="show_clip_board">显示剪贴板建议</string>
+    <string name="pref_key_search_browser_history">pref_key_search_browser_history</string>
+    <string name="search_browser_history">搜索浏览历史</string>
+    <string name="pref_key_search_bookmark">pref_key_search_bookmark</string>
+    <string name="search_bookmark">搜索书签</string>
+    <string name="pref_key_match_search_history">pref_key_match_search_history</string>
+    <string name="pref_key_save_password">pref_key_save_password</string>
+    <string name="match_search_history">匹配搜索记录</string>
+    <string name="search_content">搜索内容</string>
+    <string name="show_search_content">展示搜索内容</string>
+    <string name="setting">设置</string>
+    <string name="save_password">保存密码</string>
+    <string name="pref_key_auto_login">pref_key_auto_login</string>
+    <string name="auto_login">自动登录</string>
+    <string name="auto_login_summary">使用存储和的凭证自动登录网站。当该功能处于停用 状态时，您每次都要通过验证才能登录网站</string>
+    <string name="password_show_summary">已保存的密码将显示在这里</string>
+    <string name="pref_key_password_category">pref_key_password_category</string>
+    <string name="disable">禁用</string>
+    <string name="export_password">导出密码...</string>
+    <string name="question">查看</string>
+    <string name="pref_key_main_page_open_close">pref_key_main_page_open_close</string>
+    <string name="pref_key_main_page_url_display">pref_key_main_page_url_display</string>
+    <string name="visit_this_site">打开此网页</string>
+    <string name="close">关闭</string>
+    <string name="main_page">主页</string>
+    <string name="pref_key_main_page_url">pref_key_main_page_url</string>
+    <string name="apperance">外观</string>
+    <string name="pref_key_open_background_setting">pref_key_open_background_setting</string>
+    <string name="pref_key_enable_bottom_bar">pref_key_enable_bottom_bar</string>
+    <string name="theme_background">主题背景</string>
+    <string name="enable_bottom_bar">启用底部工具栏</string>
+    <string name="pref_key_show_reward_icon">pref_key_show_reward_icon</string>
+    <string name="show_reward_icon">隐藏奖励图标</string>
+    <string name="show_reward_icon_summary">当未启用奖励图标时隐藏奖励图标</string>
+    <string name="pref_key_video_play_in_background_display">pref_key_video_play_in_background_display</string>
+    <string name="play_video_in_background">后台视频播放</string>
+    <string name="pref_key_video_play_in_background">pref_key_video_play_in_background</string>
+    <string name="pref_key_https_everywhere">pref_key_https_everywhere</string>
+    <string name="https_everywhere">HTTPS Everywhere</string>
+    <string name="https_everywhere_summary">尽可能使用HTTPS而不是HTTP打开支持的网站</string>
+    <string name="close_all_tabs_when_quit_summary">不要在两次浏览会话中保存标签页</string>
+    <string name="pref_key_block_ad">pref_key_block_ad</string>
+    <string name="block_ad">广告过滤</string>
+    <string name="block_ad_summary">阻止广告加载</string>
+    <string name="pref_key_finger_print_protect">pref_key_finger_print_protect</string>
+    <string name="finger_print_protect">指纹保护</string>
+    <string name="finger_print_protect_summary">阻止浏览器识别浏览指纹</string>
+    <string name="pref_key_content_preload">pref_key_content_preload</string>
+    <string name="content_preload">预加载网页，以便实现更快速的浏览和搜索</string>
+    <string name="content_preload_summary">使用Cookie记住您的偏好设置（即使您不访问这些网页）</string>
+    <string name="pref_key_no_track_display">pref_key_no_track_display</string>
+    <string name="no_track">\"不跟踪\"</string>
+    <string name="pref_key_clear_data_display">pref_key_clear_data_display</string>
+    <string name="clear_browser_data">清除浏览数据</string>
+    <string name="clear_browser_data_summary">清除历史记录、Cookie、网站数据、缓存内容…</string>
+    <string name="auto_fill_search_and_url">自动填充搜索字词和网址</string>
+    <string name="auto_fill_search_and_url_summary">将一些Cookie以及地址栏和搜索框中的搜索字词发送给您的默认搜索引擎</string>
+    <string name="pref_key_show_ad_when_stream_is_not_in_use">pref_key_show_ad_when_stream_is_not_in_use</string>
+    <string name="show_ad_when_Stream_is_not_in_use">未使用Stream时显示广告</string>
+    <string name="pref_key_reset_browser_reward">pref_key_reset_browser_reward</string>
+    <string name="reset_Stream_reward">重置Stream奖励</string>
+    <string name="stream_reward">Stream奖励</string>
+    <string name="pref_key_force_enable_zoom">pref_key_force_enable_zoom</string>
+    <string name="force_enable_zoom">强制启用缩放功能</string>
+    <string name="force_enable_zoom_summary">覆盖网站的请求，以防止放大</string>
+    <string name="pref_key_use_read_mode">pref_key_use_read_mode</string>
+    <string name="use_read_mode">使用阅读模式查看网页</string>
+    <string name="use_read_mode_summary">询问是否使用阅读模式来展示支持这一功能的文章</string>
+    <string name="pref_key_open_tabs_in_custom_tabs">pref_key_open_tabs_in_custom_tabs</string>
+    <string name="open_tabs_in_custom_tabs">在自定义标签页中打开标签</string>
+    <string name="open_tabs_in_custom_tabs_summary">在自定义标签页打开标签的选项</string>
+    <string name="text_100_percent">100%</string>
+    <string name="font_size_sample">拖动该滑块，将文字调整到适合您阅读的大小。点按两次某段落后，显示的文字字少应是这么大。</string>
+    <string name="font_size">文字大小</string>
+    <string name="pref_key_font_size">pref_key_font_size</string>
+    <string name="pref_key_site_cookie_display">pref_key_site_cookie_display</string>
+    <string name="cookies">Cookie</string>
+    <string name="pref_key_site_location_display">pref_key_site_location_display</string>
+    <string name="pref_key_site_camera_display">pref_key_site_camera_display</string>
+    <string name="pref_key_site_micro_phone_display">pref_key_site_micro_phone_display</string>
+    <string name="pref_key_site_motion_sensors_display">pref_key_site_motion_sensors_display</string>
+    <string name="pref_key_site_notification_display">pref_key_site_notification_display</string>
+    <string name="pref_key_site_javascript_display">pref_key_site_javascript_display</string>
+    <string name="pref_key_site_popup_redirect_display">pref_key_site_popup_redirect_display</string>
+    <string name="pref_key_site_desktop_mode_display">pref_key_site_desktop_mode_display</string>
+    <string name="pref_key_site_automatic_download_display">pref_key_site_automatic_download_display</string>
+    <string name="pref_key_site_media_display">pref_key_site_media_display</string>
+    <string name="pref_key_site_sound_display">pref_key_site_sound_display</string>
+    <string name="pref_key_site_storage_display">pref_key_site_storage_display</string>
+    <string name="pref_key_site_usb_display">pref_key_site_usb_display</string>
+    <string name="pref_key_site_clipboard_display">pref_key_site_clipboard_display</string>
+    <string name="locations">位置信息</string>
+    <string name="camera">摄像头</string>
+    <string name="micro_phone">麦克风</string>
+    <string name="motion_sensors">动态传感器</string>
+    <string name="javascript">Javascript</string>
+    <string name="popup_redirect">弹出式窗口和重定向</string>
+    <string name="desktop_mode">桌面模式</string>
+    <string name="automatic_download">自动下载项</string>
+    <string name="media">媒体</string>
+    <string name="sound">声音</string>
+    <string name="storage">存储数据</string>
+    <string name="usb">USB</string>
+    <string name="clipboard">剪贴板</string>
+    <string name="pref_key_site_cookie">pref_key_site_cookie</string>
+    <string name="allow">允许</string>
+    <string name="forbid">已禁止</string>
+    <string name="pref_key_site_location">pref_key_site_location</string>
+    <string name="ask_first">先询问</string>
+    <string name="pref_key_site_camera">pref_key_site_camera</string>
+    <string name="pref_key_site_micro_phone">pref_key_site_micro_phone</string>
+    <string name="pref_key_site_motion_sensors">pref_key_site_motion_sensors</string>
+    <string name="pref_key_site_notification">pref_key_site_notification</string>
+    <string name="pref_key_site_javascript">pref_key_site_javascript</string>
+    <string name="pref_key_site_popup_redirect">pref_key_site_popup_redirect</string>
+    <string name="pref_key_site_desktop_mode">pref_key_site_desktop_mode</string>
+    <string name="prefer_desktop_mode">更喜欢桌面的网站</string>
+    <string name="prefer_mobile_mode">更喜欢移动版的网站</string>
+    <string name="pref_key_site_automatic_download">pref_key_site_automatic_download</string>
+    <string name="pref_key_site_sound">pref_key_site_sound</string>
+    <string name="pref_key_site_storage">pref_key_site_storage</string>
+    <string name="pref_key_site_usb">pref_key_site_usb</string>
+    <string name="pref_key_site_clipboard">pref_key_site_clipboard</string>
+    <string name="allow_read_write_cookie">允许网站保存和读取Cookie数据（推荐）</string>
+    <string name="site_location_summary">网站需要先访问并取得您的许可才能获取您的位置信息（推荐）</string>
+    <string name="pref_key_open_location_setting">pref_key_open_location_setting</string>
+    <string name="open_location_setting">要让Stream访问您的位置信息，您还需要在<![CDATA[<font color=\'%s\'>Android设置</font>]]>中开启位置信息服务</string>
+    <string name="allow_use_camera">在允许网站使用您的摄像头前先询问（推荐）</string>
+    <string name="allow_use_micro_phone">在允许网站使用您的麦克风前先询问（推荐）</string>
+    <string name="pref_key_open_micro_phone_setting">pref_key_open_micro_phone_setting</string>
+    <string name="open_micro_phone_setting">要让Stream访问您的麦克风，您还需要在<![CDATA[<font color=\'%s\'>Android设置</font>]]>中开启麦克风</string>
+    <string name="allow_use_motion_sensors">允许网站使用动态传感器（推荐）</string>
+    <string name="allow_notification">网站发送通知前需先询问并获得许可（推荐）</string>
+    <string name="allow_javascript">允许网站运行Javascript（推荐）</string>
+    <string name="forbid_popup_redirect">禁止网站显示弹出式窗口和重定向（推荐）</string>
+    <string name="use_mobile_mode">对新标签页使用移动版的网站（推荐）</string>
+    <string name="use_desktop_mode">对新标签页启用桌面视图</string>
+    <string name="pref_key_site_protect_content">pref_key_site_protect_content</string>
+    <string name="protect_content">受保护的内容</string>
+    <string name="pref_key_site_auto_play">pref_key_site_auto_play</string>
+    <string name="auto_play">自动播放</string>
+    <string name="pref_key_site_play_in_stream">pref_key_site_play_in_stream</string>
+    <string name="play_in_stream">在Stream中播放视频</string>
+    <string name="pref_key_site_protect_content_display">pref_key_site_protect_content_display</string>
+    <string name="pref_key_site_auto_play_display">pref_key_site_auto_play_display</string>
+    <string name="pref_key_site_play_in_stream_display">pref_key_site_play_in_stream_display</string>
+    <string name="allow_sound">允许网站播放声音（推荐）</string>
+    <string name="forbid_sound">将播放声音的网站静音</string>
+    <string name="clear_site_data">清空网站存储数据</string>
+    <string name="allow_usb">网站需先询问并得到许可才能连接设备（推荐）</string>
+    <string name="forbid_usb">禁止网站连接到设备</string>
+    <string name="allow_clipboard">网站需先询问并得到许可才能读取剪贴板中的文字和图片（推荐）</string>
+    <string name="forbid_clipboard">禁止网站读取剪贴板中的文字和图片</string>
+    <string name="pref_key_language">pref_key_language</string>
+    <string name="pref_key_user_password">pref_key_user_password</string>
+    <string name="pref_key_translate_other">pref_key_translate_other</string>
+    <string name="translate_other">询问是否翻译其他版本的网页</string>
+    <string name="pref_key_add_language">pref_key_add_language</string>
+    <string name="add_language">添加语言</string>
+    <string name="show_you_page_in_language_you_choose">网站将尽可能以您的首选语言显示文字。</string>
+    <string name="pref_key_language_category">pref_key_language_category</string>
+    <string name="pref_key_language_list">pref_key_language_list</string>
+    <string name="delete">删除</string>
+    <string name="provide_translate">提供翻译</string>
+    <string name="pref_key_download_display">pref_key_download_display</string>
+    <string name="download_position">下载内容保存位置</string>
+    <string name="pref_key_ask_before_download">pref_key_ask_before_download</string>
+    <string name="ask_before_download">询问文件保存位置</string>
+    <string name="pref_key_download_path">pref_key_download_path</string>
+</resources>

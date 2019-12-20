@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/browserFragment">
+    <action
+        android:id="@+id/action_global_browserFragment"
+        app:destination="@id/browserFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+
+    <fragment
+        android:id="@+id/browserFragment"
+        android:name="com.rapider.bloc.fragments.browser.BrowserFragment"
+        android:label="BrowserFragment"
+        tools:layout="@layout/fragment_browser"
+        />
+    <action
+        android:id="@+id/action_global_tabsTrayFragment"
+        app:destination="@id/tabsTrayFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/tabsTrayFragment"
+        android:name="com.rapider.bloc.fragments.tabs.TabsTrayFragment"
+        android:label="TabsTrayFragment"
+        tools:layout="@layout/fragment_tabstray"
+        />
+    <action
+        android:id="@+id/action_global_mainSettingFragment"
+        app:destination="@id/mainSettingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/mainSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.main.MainSettingFragment"
+        android:label="MainSettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
+    <action
+        android:id="@+id/action_global_guideFragment"
+        app:destination="@id/guideFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+    app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="com.rapider.bloc.fragments.guide.GuideFragment"
+        android:label="GuideFragment"
+        tools:layout="@layout/fragment_guide"
+        />
+
+    <action
+        android:id="@+id/action_global_aboutSettingFragment"
+        app:destination="@id/aboutSettingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/aboutSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.about.AboutSettingFragment"
+        android:label="AboutSettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
+</navigation>

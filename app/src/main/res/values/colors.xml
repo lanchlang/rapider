@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="placeholder_grey">#777777</color>
+
+    <color name="dark">#ff212121</color>
+    <color name="evenDarker">#ff1a1a1a</color>
+
+    <color name="toolbarBackgroundColor">@color/evenDarker</color>
+    <color name="toolbarUrlBoxColor">#333333</color>
+    <color name="toolbarSuggestionForeground">@color/colorDisabled</color>
+    <color name="toolbarSuggestionBackground">@color/colorAccent</color>
+
+    <color name="icons">#ffffffff</color>
+
+    <!-- Overriding color of tab counter icon in toolbar -->
+    <color name="mozac_ui_tabcounter_default_tint" tools:ignore="UnusedResources">@color/icons</color>
+
+    <color name="textColorTitle">@color/textColorPrimary</color>
+    <color name="textColorSubTitle">@color/textColorDisabled</color>
+    <color name="divider">#99EBEBEB</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#E65B37</color>
+    <color name="colorAccentSecond">#FDB6A4</color>
+    <color name="textColorPrimary">#DF000000</color>
+    <color name="textColorSecondary">#99000000</color>
+    <color name="textColorDisabled">#61000000</color>
+    <color name="colorDisabled">@color/textColorDisabled</color>
+    <color name="colorFontSizeSampleBg">#F2F3F5</color>
+
+</resources>

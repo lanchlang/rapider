@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="24dp"
-        tools:src="@drawable/ic_notification"
+        tools:src="@drawable/ic_back_24"
         />
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/end_icon"
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="24dp"
-        tools:src="@drawable/ic_notification"
+        tools:src="@drawable/ic_close_24"
         />
     <LinearLayout
         android:id="@+id/text_container"

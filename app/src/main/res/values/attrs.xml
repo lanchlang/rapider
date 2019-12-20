@@ -11,4 +11,15 @@
     <declare-styleable name="ToggleImageButton">
         <attr name="android:checked" />
     </declare-styleable>
+
+    <declare-styleable name="CustomPreference">
+        <attr name="startIcon" format="reference"/>
+        <attr name="endIcon" format="reference"/>
+        <attr name="showDivider" format="boolean"/>
+        <attr name="dividerColor" format="color|reference"/>
+        <attr name="textStartMargin" format="dimension"/>
+        <attr name="customLayout" format="reference"/>
+        <attr name="titleColor" format="color|reference" />
+        <attr name="summaryColor" format="color|reference" />
+    </declare-styleable>
 </resources>

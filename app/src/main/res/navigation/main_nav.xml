@@ -57,18 +57,69 @@
         android:label="GuideFragment"
         tools:layout="@layout/fragment_guide"
         />
-
     <action
-        android:id="@+id/action_global_aboutSettingFragment"
-        app:destination="@id/aboutSettingFragment"
+        android:id="@+id/action_global_generalSettingFragment"
+        app:destination="@id/generalSettingFragment"
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
         app:popExitAnim="@anim/nav_default_exit_anim" />
     <fragment
-        android:id="@+id/aboutSettingFragment"
-        android:name="com.rapider.bloc.fragments.settings.about.AboutSettingFragment"
-        android:label="AboutSettingFragment"
+        android:id="@+id/generalSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.general.GeneralSettingFragment"
+        android:label="GeneralSettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
+    <action
+    android:id="@+id/action_global_toolbarSettingFragment"
+    app:destination="@id/toolbarSettingFragment"
+    app:enterAnim="@anim/nav_default_enter_anim"
+    app:exitAnim="@anim/nav_default_exit_anim"
+    app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+    app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/toolbarSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.toolbar.ToolbarSettingFragment"
+        android:label="ToolbarSettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
+    <action
+        android:id="@+id/action_global_adblockSettingFragment"
+        app:destination="@id/adblockSettingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/adblockSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.adblock.AdblockSettingFragment"
+        android:label="AdblockSettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
+    <action
+        android:id="@+id/action_global_privacySettingFragment"
+        app:destination="@id/privacySettingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/privacySettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.privacy.PrivacySettingFragment"
+        android:label="PrivacySettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
+    <action
+        android:id="@+id/action_global_cacheSettingFragment"
+        app:destination="@id/cacheSettingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/cacheSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.cache.CacheSettingFragment"
+        android:label="CacheSettingFragment"
         tools:layout="@layout/fragment_preference"
         />
 </navigation>

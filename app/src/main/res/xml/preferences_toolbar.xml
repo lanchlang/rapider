@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBoxPreference
+    android:key="@string/pref_key_toolbar_fix_at_bottom"
+    android:layout="@layout/pref_simple_switch_item"
+    android:title="@string/toolbar_fix_at_bottom"
+    android:defaultValue="false"
+    />
+    <CheckBoxPreference
+        android:key="@string/pref_key_scroll_up_to_home"
+        android:layout="@layout/pref_simple_switch_item"
+        android:title="@string/scroll_up_to_home"
+        android:defaultValue="false"
+        />
+    <Preference
+        android:key="@string/pref_key_toolbar_style_display"
+        android:layout="@layout/pref_simple_custom_higher_item"
+        android:title="@string/toolbar_style_display" />
+</androidx.preference.PreferenceScreen>

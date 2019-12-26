@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="64dp">
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@android:id/title"
         android:layout_width="wrap_content"
@@ -12,10 +12,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        tools:text="@string/search_engine"
-        style="@style/accentTitle"
+        android:layout_marginStart="24dp"
+        tools:text="@string/ad_block_rules"
+        style="@style/title"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,5 +55,26 @@ class MainSettingFragment : BasePreferenceFragmentCompat(),BackHandler {
                    true
                }
            }
+        findPreferenceById(R.string.pref_key_toolbar_display)?.apply {
+            this.setOnPreferenceClickListener {
+                val direction=MainNavDirections.actionGlobalToolbarSettingFragment()
+                findNavController().navigate(direction)
+                true
+            }
+        }
+        findPreferenceById(R.string.pref_key_ad_block_display)?.apply {
+            this.setOnPreferenceClickListener {
+                val direction=MainNavDirections.actionGlobalAdblockSettingFragment()
+                findNavController().navigate(direction)
+                true
+            }
+        }
+        findPreferenceById(R.string.pref_key_privacy_settings_display)?.apply {
+            this.setOnPreferenceClickListener {
+                val direction=MainNavDirections.actionGlobalPrivacySettingFragment()
+                findNavController().navigate(direction)
+                true
+            }
+        }
     }
 }

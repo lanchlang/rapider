@@ -17,4 +17,35 @@
     <string name="pref_key_privacy" translatable="false">pref_key_privacy</string>
     <string name="pref_key_tracking_protection_normal" translatable="false">pref_key_tracking_protection_normal</string>
     <string name="pref_key_tracking_protection_private" translatable="false">pref_key_tracking_protection_private</string>
+
+    <string name="pref_key_general_display">pref_key_general_display</string>
+    <string name="pref_key_toolbar_display">pref_key_toolbar_display</string>
+    <string name="pref_key_ad_block_display">pref_key_ad_block_display</string>
+    <string name="pref_key_privacy_settings_display">pref_key_privacy_settings_display</string>
+    <string name="pref_key_library_display">pref_key_library_display</string>
+    <string name="pref_key_report_display">pref_key_report_display</string>
+    <string name="pref_key_about_display">pref_key_about_display</string>
+    <string name="pref_key_clear_cache_display">pref_key_clear_cache_display</string>
+    <string name="pref_key_search_engine_display">pref_key_search_engine_display</string>
+    <string name="pref_key_pre_load_display">pref_key_pre_load_display</string>
+    <string name="pref_key_ua_settings_display">pref_key_ua_settings_display</string>
+    <string name="pref_key_font_size_settings_display">pref_key_font_size_settings_display</string>
+    <string name="pref_key_show_status_bar">pref_key_show_status_bar</string>
+    <string name="pref_key_no_img_smart">pref_key_no_img_smart</string>
+    <string name="pref_key_auto_next_smart">pref_key_auto_next_smart</string>
+    <string name="pref_key_auto_ajust_to_screen">pref_key_auto_ajust_to_screen</string>
+    <string name="pref_key_speed_up_by_cloud">pref_key_speed_up_by_cloud</string>
+    <string name="pref_key_auto_recover">pref_key_auto_recover</string>
+    <string name="pref_key_toolbar_fix_at_bottom">pref_key_toolbar_fix_at_bottom</string>
+    <string name="pref_key_scroll_up_to_home">pref_key_scroll_up_to_home</string>
+    <string name="pref_key_toolbar_style_display">pref_key_toolbar_style_display</string>
+    <string name="pref_key_open_ad_block">pref_key_open_ad_block</string>
+    <string name="pref_key_ad_block_rules">pref_key_ad_block_rules</string>
+    <string name="pref_key_forbid_3rd_cookies">pref_key_forbid_3rd_cookies</string>
+    <string name="pref_key_send_do_not_track">pref_key_send_do_not_track</string>
+    <string name="pref_key_clear_search_history">pref_key_clear_search_history</string>
+    <string name="pref_key_clear_account_password">pref_key_clear_account_password</string>
+    <string name="pref_key_clear_cookies">pref_key_clear_cookies</string>
+    <string name="pref_key_clear_history">pref_key_clear_history</string>
+    <string name="pref_key_clear_cache_file">pref_key_clear_cache_file</string>
 </resources>

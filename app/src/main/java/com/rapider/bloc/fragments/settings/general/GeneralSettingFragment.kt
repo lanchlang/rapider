@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
+import com.rapider.MainNavDirections
 import com.rapider.R
 import com.rapider.base.SimplePreferenceFragmentCompat
 import com.rapider.extensions.*
@@ -37,9 +39,10 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(),BackHandler {
     }
 
     private fun setupPreferences() {
-           findPreferenceById(R.string.pref_key_general_display)?.apply {
+           findPreferenceById(R.string.pref_key_clear_cache_display)?.apply {
                this.setOnPreferenceClickListener {
-
+                   val direction= MainNavDirections.actionGlobalCacheSettingFragment()
+                   findNavController().navigate(direction)
                    true
                }
            }

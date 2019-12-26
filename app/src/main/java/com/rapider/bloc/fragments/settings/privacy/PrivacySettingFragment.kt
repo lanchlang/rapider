@@ -15,7 +15,7 @@ import mozilla.components.support.base.feature.BackHandler
 
 class PrivacySettingFragment : SimplePreferenceFragmentCompat(),BackHandler {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.preferences_adblock, rootKey)
+        setPreferencesFromResource(R.xml.preferences_privacy, rootKey)
     }
     override fun initView(view: View) {
         super.initView(view)

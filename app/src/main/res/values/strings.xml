@@ -369,4 +369,27 @@
     <string name="pref_key_ask_before_download">pref_key_ask_before_download</string>
     <string name="ask_before_download">询问文件保存位置</string>
     <string name="pref_key_download_path">pref_key_download_path</string>
+    <string name="general">通用</string>
+    <string name="pref_key_general_display">pref_key_general_display</string>
+    <string name="toolbar">工具栏</string>
+    <string name="pref_key_toolbar_display">pref_key_toolbar_display</string>
+    <string name="ad_block">广告过滤</string>
+    <string name="pref_key_ad_block_display">pref_key_ad_block_display</string>
+    <string name="pref_key_privacy_settings_display">pref_key_privacy_settings_display</string>
+    <string name="library">实验室</string>
+    <string name="pref_key_library_display">pref_key_library_display</string>
+    <string name="report">反馈</string>
+    <string name="pref_key_report_display">pref_key_report_display</string>
+    <string name="about">关于</string>
+    <string name="pref_key_about_display">pref_key_about_display</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="pref_key_clear_cache_display">pref_key_clear_cache_display</string>
+    <string name="pref_key_search_engine_display">pref_key_search_engine_display</string>
+    <string name="pre_load">智能预加载网页</string>
+    <string name="pref_key_pre_load_display">pref_key_pre_load_display</string>
+    <string name="ua_settings">UA设置</string>
+    <string name="pref_key_ua_settings_display">pref_key_ua_settings_display</string>
+    <string name="pref_key_font_size_settings_display">pref_key_font_size_settings_display</string>
+    <string name="show_status_bar">显示状态栏</string>
+    <string name="pref_key_show_status_bar">pref_key_show_status_bar</string>
 </resources>

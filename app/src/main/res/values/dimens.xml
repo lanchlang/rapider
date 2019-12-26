@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="toolbarTextSize">22sp</dimen>
-    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="toolbarTextSize">16sp</dimen>
+    <dimen name="titleTextSize">14.5sp</dimen>
     <dimen name="accentTitleTextSize">15sp</dimen>
-    <dimen name="subTitleTextSize">14sp</dimen>
+    <dimen name="subTitleTextSize">14.5sp</dimen>
     <dimen name="defaultFontSize">13sp</dimen>
-
     <dimen name="normalMargin">16dp</dimen>
     <dimen name="normalPadding">16dp</dimen>
 </resources>

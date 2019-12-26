@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
+import android.widget.LinearLayout
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.navigation.fragment.findNavController
@@ -17,7 +18,7 @@ import mozilla.components.support.base.feature.BackHandler
 
 abstract class SimplePreferenceFragmentCompat: PreferenceFragmentCompat(),BackHandler{
      open fun initView(view: View){
-         val toolbar=view.findViewById<Toolbar>(R.id.toolbar)
+         val toolbar=view.findViewById<LinearLayout>(R.id.toolbar)
          listView.apply {
              overScrollMode= View.OVER_SCROLL_NEVER
              isVerticalScrollBarEnabled=false
@@ -34,7 +35,7 @@ abstract class SimplePreferenceFragmentCompat: PreferenceFragmentCompat(),BackHa
          setUpToolbar(toolbar)
      }
 
-    open fun setUpToolbar(toolbar: Toolbar?){
+    open fun setUpToolbar(toolbar: LinearLayout?){
 
     }
 

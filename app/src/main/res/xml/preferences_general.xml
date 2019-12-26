@@ -3,32 +3,33 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
    <Preference
        android:layout="@layout/pref_simple_custom_item"
-       android:key="@string/pref_key_general_display"
-       android:title="@string/general"
+       android:key="@string/pref_key_clear_cache_display"
+       android:title="@string/clear_cache"
        />
     <Preference
         android:layout="@layout/pref_simple_custom_item"
-        android:key="@string/pref_key_toolbar_display"
-        android:title="@string/toolbar"
+        android:key="@string/pref_key_search_engine_display"
+        android:title="@string/search_engine"
         />
     <Preference
         android:layout="@layout/pref_simple_custom_item"
-        android:key="@string/pref_key_ad_block_display"
-        android:title="@string/ad_block"
+        android:key="@string/pref_key_pre_load_display"
+        android:title="@string/pre_load"
         />
     <Preference
         android:layout="@layout/pref_simple_custom_item"
-        android:key="@string/pref_key_privacy_settings_display"
-        android:title="@string/privacy_settings"
+        android:key="@string/pref_key_font_size_settings_display"
+        android:title="@string/font_size"
         />
     <Preference
         android:layout="@layout/pref_simple_custom_item"
-        android:key="@string/pref_key_library_display"
-        android:title="@string/library"
+        android:key="@string/pref_key_show_status_bar"
+        android:title="@string/show_status_bar"
         />
     <Preference
         android:layout="@layout/pref_simple_custom_item"

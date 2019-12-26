@@ -46,5 +46,13 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(),BackHandler {
                    true
                }
            }
+        findPreferenceById(R.string.pref_key_search_engine_display)?.apply {
+            this.summary=requireContext().getSpString(R.string.pref_key_search_engine_name)
+            this.setOnPreferenceClickListener {
+                val direction= MainNavDirections.actionGlobalSearchSettingFragment()
+                findNavController().navigate(direction)
+                true
+            }
+        }
     }
 }

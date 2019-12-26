@@ -12,6 +12,6 @@
     />
     <PreferenceCategory
         android:key="@string/pref_key_ad_block_rules"
-        android:layout="@layout/pref_custom_category"
+        android:layout="@layout/pref_empty_category"
         android:title="@string/ad_block_rules"/>
 </androidx.preference.PreferenceScreen>

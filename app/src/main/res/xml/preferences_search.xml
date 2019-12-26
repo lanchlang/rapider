@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.PreferenceCategory
+        android:key="@string/pref_key_search_engine_category"
+        android:layout="@layout/pref_empty_category"
+        />
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/pref_empty_category_divider"/>
+    <androidx.preference.CheckBoxPreference
+    android:key="@string/pref_key_show_search_advice"
+    android:layout="@layout/pref_simple_switch_item"
+    android:title="@string/show_search_advice"
+    android:defaultValue="true"
+    />
+    <androidx.preference.CheckBoxPreference
+        android:key="@string/pref_key_show_clip_board"
+        android:layout="@layout/pref_simple_switch_item"
+        android:title="@string/show_clip_board"
+        android:defaultValue="true"
+        />
+    <androidx.preference.CheckBoxPreference
+        android:key="@string/pref_key_search_browser_history"
+        android:layout="@layout/pref_simple_switch_item"
+        android:title="@string/search_browser_history"
+        android:defaultValue="true"
+        />
+    <androidx.preference.CheckBoxPreference
+        android:key="@string/pref_key_search_bookmark"
+        android:layout="@layout/pref_simple_switch_item"
+        android:title="@string/search_bookmark"
+        android:defaultValue="true"
+        />
+    <androidx.preference.CheckBoxPreference
+        android:key="@string/pref_key_match_search_history"
+        android:layout="@layout/pref_simple_switch_item"
+        android:title="@string/match_search_history"
+        android:defaultValue="true"
+        />
+</androidx.preference.PreferenceScreen>

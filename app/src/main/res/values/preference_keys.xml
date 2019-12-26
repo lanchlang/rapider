@@ -48,4 +48,16 @@
     <string name="pref_key_clear_cookies">pref_key_clear_cookies</string>
     <string name="pref_key_clear_history">pref_key_clear_history</string>
     <string name="pref_key_clear_cache_file">pref_key_clear_cache_file</string>
+
+    <string name="pref_key_search_engine_category">pref_key_search_engine_category</string>
+    <string name="pref_key_show_search_advice">pref_key_show_search_advice</string>
+    <string name="pref_key_show_clip_board">pref_key_show_clip_board</string>
+    <string name="pref_key_search_browser_history">pref_key_search_browser_history</string>
+    <string name="pref_key_search_bookmark">pref_key_search_bookmark</string>
+    <string name="pref_key_match_search_history">pref_key_match_search_history</string>
+
+    <string name="pref_key_search_engine_name">pref_key_search_engine_name</string>
+    <string name="pref_key_search_engine">pref_key_search_engine</string>
+
+
 </resources>

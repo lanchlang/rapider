@@ -198,15 +198,12 @@
     <string name="default_pref_screen_key">default_pref_screen_key</string>
     <string name="search">搜索</string>
     <string name="show_search_advice">显示搜索建议</string>
-    <string name="pref_key_show_search_advice">pref_key_show_search_advice</string>
-    <string name="pref_key_show_clip_board">pref_key_show_clip_board</string>
+
     <string name="show_clip_board">显示剪贴板建议</string>
-    <string name="pref_key_search_browser_history">pref_key_search_browser_history</string>
+
     <string name="search_browser_history">搜索浏览历史</string>
-    <string name="pref_key_search_bookmark">pref_key_search_bookmark</string>
     <string name="search_bookmark">搜索书签</string>
-    <string name="pref_key_match_search_history">pref_key_match_search_history</string>
-    <string name="pref_key_save_password">pref_key_save_password</string>
+
     <string name="match_search_history">匹配搜索记录</string>
     <string name="search_content">搜索内容</string>
     <string name="show_search_content">展示搜索内容</string>

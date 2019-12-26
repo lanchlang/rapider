@@ -17,6 +17,7 @@ import com.rapider.bloc.fragments.guide.GuideFragment
 import com.rapider.bloc.fragments.history.HistoryFragment
 import com.rapider.bloc.fragments.home.HomeFragment
 import com.rapider.bloc.fragments.settings.main.MainSettingFragment
+import com.rapider.bloc.fragments.settings.search.SearchSettingFragment
 import com.rapider.bloc.fragments.tabs.TabsTrayFragment
 import com.rapider.di.viewmodel.ViewModelModule
 import dagger.Component

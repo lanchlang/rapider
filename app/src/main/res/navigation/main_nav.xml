@@ -122,4 +122,17 @@
         android:label="CacheSettingFragment"
         tools:layout="@layout/fragment_preference"
         />
+    <action
+        android:id="@+id/action_global_searchSettingFragment"
+        app:destination="@id/searchSettingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/searchSettingFragment"
+        android:name="com.rapider.bloc.fragments.settings.search.SearchSettingFragment"
+        android:label="SearchSettingFragment"
+        tools:layout="@layout/fragment_preference"
+        />
 </navigation>

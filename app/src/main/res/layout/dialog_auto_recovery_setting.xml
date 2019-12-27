@@ -14,7 +14,7 @@
         >
         <TextView
             android:id="@+id/title"
-            android:text="@string/pre_load"
+            android:text="@string/auto_recover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,13 +39,13 @@
                 android:paddingTop="16dp"
                 >
                 <com.rapider.views.SelectableTextView
-                    android:id="@+id/always_open"
+                    android:id="@+id/no_auto_recovery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|start"
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp"
-                    app:text="@string/always_open"
+                    app:text="@string/no_auto_recovery"
                     style="@style/title"
                     android:textStyle="normal"
                     android:textColor="@color/state_text"
@@ -57,11 +57,11 @@
                 <com.rapider.views.SelectableTextView
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp"
-                    android:id="@+id/open_in_local_network"
+                    android:id="@+id/ask_before_auto_recovery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
-                    app:text="@string/open_in_local_network"
+                    app:text="@string/ask_before_auto_recovery"
                     />
             </FrameLayout>
 
@@ -72,11 +72,11 @@
                 <com.rapider.views.SelectableTextView
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp"
-                    android:id="@+id/never_open"
+                    android:id="@+id/auto_recovery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start|center_vertical"
-                    app:text="@string/never_open"
+                    app:text="@string/auto_recovery"
                     />
             </FrameLayout>
         </LinearLayout>

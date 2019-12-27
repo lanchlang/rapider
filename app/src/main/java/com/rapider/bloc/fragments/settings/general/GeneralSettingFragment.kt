@@ -32,10 +32,12 @@ import razerdp.basepopup.QuickPopupConfig
 class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
     private var uaPopupHelper:UaPopupHelper?=null
     private var preLoadPopupHelper:PreloadPopupHelper?=null
+    private var autoRecoverPopupHelper:AutoRecoverPopupHelper?=null
     override fun onAttach(context: Context) {
         super.onAttach(context)
         uaPopupHelper= UaPopupHelper(this,this.requireContext())
         preLoadPopupHelper= PreloadPopupHelper(this,this.requireContext())
+        autoRecoverPopupHelper= AutoRecoverPopupHelper(this,this.requireContext())
     }
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_general, rootKey)
@@ -89,6 +91,18 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
             this.summary=requireContext().getSpString(R.string.pref_key_pre_load,getString(R.string.always_open))
             this.setOnPreferenceClickListener {
                 preLoadPopupHelper?.showPreLoadPopup()
+                true
+            }
+        }
+        findPreferenceById(R.string.pref_key_auto_recover)?.apply {
+            val storeValue=requireContext().getSpString(R.string.pref_key_auto_recover,getString(R.string.auto_recovery))
+            if (storeValue==getString(R.string.auto_recovery) || storeValue==getString(R.string.ask_before_auto_recovery)){
+                this.summary=getString(R.string.open)
+            }else{
+                this.summary=getString(R.string.close)
+            }
+            this.setOnPreferenceClickListener {
+                autoRecoverPopupHelper?.showAutoRecoverPopup()
                 true
             }
         }

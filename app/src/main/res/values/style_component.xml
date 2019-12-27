@@ -5,6 +5,11 @@
 		<item name="android:textSize">@dimen/accentTitleTextSize</item>
 		<item name="android:textStyle">bold</item>
 	</style>
+	<style name="dialogTitle">
+		<item name="android:textColor">@color/textColorPrimary</item>
+		<item name="android:textSize">@dimen/accentTitleTextSize</item>
+		<item name="android:textStyle">bold</item>
+	</style>
 	<style name="toolbar">
 		<item name="android:textColor">@color/textColorTitle</item>
 		<item name="android:textSize">@dimen/toolbarTextSize</item>

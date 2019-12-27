@@ -4,21 +4,43 @@
 
 package com.rapider.bloc.fragments.settings.general
 
+import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import android.view.animation.DecelerateInterpolator
+import android.view.animation.TranslateAnimation
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.rapider.MainNavDirections
 import com.rapider.R
 import com.rapider.base.SimplePreferenceFragmentCompat
-import com.rapider.extensions.*
+import com.rapider.extensions.dp2px
+import com.rapider.extensions.findPreferenceById
+import com.rapider.extensions.getSpString
+import com.rapider.extensions.setSpString
+import com.rapider.views.RoundRectOutlineProvider
+import com.rapider.views.SelectableTextView
 import mozilla.components.support.base.feature.BackHandler
+import razerdp.basepopup.BasePopupWindow
+import razerdp.basepopup.QuickPopupBuilder
+import razerdp.basepopup.QuickPopupConfig
 
-class GeneralSettingFragment : SimplePreferenceFragmentCompat(),BackHandler {
+class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
+    private var uaPopupHelper:UaPopupHelper?=null
+    private var preLoadPopupHelper:PreloadPopupHelper?=null
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        uaPopupHelper= UaPopupHelper(this,this.requireContext())
+        preLoadPopupHelper= PreloadPopupHelper(this,this.requireContext())
+    }
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_general, rootKey)
     }
+
     override fun initView(view: View) {
         super.initView(view)
         view.findViewById<TextView>(R.id.title)?.apply {
@@ -26,33 +48,52 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(),BackHandler {
         }
 
     }
+
     override fun setUpToolbar(toolbar: LinearLayout?) {
         toolbar?.findViewById<View>(R.id.back_icon)?.apply {
-            setOnClickListener{
+            setOnClickListener {
                 onBackPressed()
             }
         }
     }
+
     override fun onResume() {
         super.onResume()
         setupPreferences()
     }
 
     private fun setupPreferences() {
-           findPreferenceById(R.string.pref_key_clear_cache_display)?.apply {
-               this.setOnPreferenceClickListener {
-                   val direction= MainNavDirections.actionGlobalCacheSettingFragment()
-                   findNavController().navigate(direction)
-                   true
-               }
-           }
-        findPreferenceById(R.string.pref_key_search_engine_display)?.apply {
-            this.summary=requireContext().getSpString(R.string.pref_key_search_engine_name)
+        findPreferenceById(R.string.pref_key_clear_cache_display)?.apply {
             this.setOnPreferenceClickListener {
-                val direction= MainNavDirections.actionGlobalSearchSettingFragment()
+                val direction = MainNavDirections.actionGlobalCacheSettingFragment()
                 findNavController().navigate(direction)
                 true
             }
         }
+        findPreferenceById(R.string.pref_key_search_engine_display)?.apply {
+            this.summary = requireContext().getSpString(R.string.pref_key_search_engine_name)
+            this.setOnPreferenceClickListener {
+                val direction = MainNavDirections.actionGlobalSearchSettingFragment()
+                findNavController().navigate(direction)
+                true
+            }
+        }
+        findPreferenceById(R.string.pref_key_ua_settings_display)?.apply {
+            this.summary = requireContext().getSpString(R.string.pref_key_user_agent, getString(R.string.ua_android))
+            this.setOnPreferenceClickListener {
+                uaPopupHelper?.showUaPopup()
+                true
+            }
+        }
+        findPreferenceById(R.string.pref_key_pre_load_display)?.apply {
+            this.summary=requireContext().getSpString(R.string.pref_key_pre_load,getString(R.string.always_open))
+            this.setOnPreferenceClickListener {
+                preLoadPopupHelper?.showPreLoadPopup()
+                true
+            }
+        }
     }
+
+
+
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources>
+    <!-- 智能预加载网页 -->
+    <string name="always_open">一直开启</string>
+    <string name="open_in_local_network">仅限使用无线局域网时</string>
+    <string name="never_open">一律不开启</string>
+    <!-- UA设置 -->
+    <string name="ua_android">Android</string>
+    <string name="ua_pc">PC</string>
+    <string name="ua_iphone">iPhone</string>
+    <!-- 异常恢复 -->
+    <string name="no_auto_recovery">关闭</string>
+    <string name="ask_before_auto_recovery">打开，恢复前询问</string>
+    <string name="auto_recovery">打开，自动恢复</string>
+    <!-- 底部导航栏样式 -->
+    <string name="navigation_style_voice">语音模式</string>
+    <string name="navigation_style_light">轻模式</string>
+    <string name="navigation_style_function">功能模式</string>
+</resources>

@@ -59,5 +59,6 @@
     <string name="pref_key_search_engine_name">pref_key_search_engine_name</string>
     <string name="pref_key_search_engine">pref_key_search_engine</string>
 
+    <string name="pref_key_user_agent">pref_key_user_agent</string>
 
 </resources>

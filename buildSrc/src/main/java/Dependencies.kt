@@ -45,6 +45,8 @@ private object Versions {
     const val switchbutton="2.0.0"
 
     const val browser="1.0.0"
+
+    const val immersionbar="3.0.0"
 }
 
 // Synchronized dependencies used by (some) modules
@@ -160,4 +162,10 @@ object Deps {
     const val gson="com.google.code.gson:gson:${Versions.gson}"
     const val switchbutton="com.kyleduo.switchbutton:library:${Versions.switchbutton}"
     const val browser="androidx.browser:browser:${Versions.browser}"
+
+    const val immersionbar="com.gyf.immersionbar:immersionbar:${Versions.immersionbar}"
+    const val immersionbar_components="com.gyf.immersionbar:immersionbar-components:${Versions.immersionbar}"
+    const val immersionbar_ktx="com.gyf.immersionbar:immersionbar-ktx:${Versions.immersionbar}"
+
+
 }

@@ -293,6 +293,10 @@ dependencies {
     implementation Deps.browser
     implementation Deps.switchbutton
     implementation Deps.gson
+
+    implementation Deps.immersionbar
+    implementation Deps.immersionbar_components
+    implementation Deps.immersionbar_ktx
 }
 
 // -------------------------------------------------------------------------------------------------

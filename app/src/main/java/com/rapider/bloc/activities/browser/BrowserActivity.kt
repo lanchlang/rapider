@@ -48,9 +48,7 @@ abstract class BrowserActivity : BaseActivity() {
         return R.layout.activity_main
     }
     override fun initView(savedInstanceState: Bundle?) {
-        if (savedInstanceState == null) {
-            findNavController(R.id.container).navigate(R.id.browserFragment)
-        }
+
     }
 
     override fun initData(savedInstanceState: Bundle?) {

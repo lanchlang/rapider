@@ -6,14 +6,12 @@
 
 package com.rapider.extensions
 
-import android.view.View
 
 /**
  * Replaces the keys with the values with the map provided.
  */
-fun View.hide(): Unit {
-    this.visibility=View.GONE
-}
-fun View.show(){
-    this.visibility=View.VISIBLE
+fun String.replace(pairs: Map<String, String>): String {
+    var result = this
+    pairs.forEach { (l, r) -> result = result.replace(l, r) }
+    return result
 }

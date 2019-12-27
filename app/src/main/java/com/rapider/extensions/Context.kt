@@ -8,8 +8,10 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.*
+import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
 import com.google.gson.Gson
 import com.rapider.AndroidApplication
@@ -139,3 +141,11 @@ inline fun<reified T> Context.getSpList(pref_key:Int):List<T>{
     return Gson().fromJson<Array<T>>(str).toList()
 }
 
+
+fun Context.loadDrawable(id:Int): Drawable?{
+    return ContextCompat.getDrawable(this,id)
+}
+
+fun Context.loadColor(resId:Int):Int{
+    return ContextCompat.getColor(this,resId)
+}

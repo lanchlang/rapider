@@ -22,8 +22,6 @@
         <item name="colorPrimary">@color/photonWhite</item>
         <item name="colorPrimaryDark">@color/photonWhite</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:navigationBarColor">@color/evenDarker</item>
-        <item name="android:windowBackground">@color/photonWhite</item>
     </style>
 
 </resources>

@@ -10,6 +10,7 @@ import com.rapider.extensions.dp2px
 import com.rapider.extensions.findPreferenceById
 import com.rapider.extensions.getSpString
 import com.rapider.extensions.setSpString
+import com.rapider.utils.fixStatusBarStateForPopupShow
 import com.rapider.views.RoundRectOutlineProvider
 import com.rapider.views.SelectableTextView
 import razerdp.basepopup.BasePopupWindow
@@ -36,7 +37,9 @@ class AutoRecoverPopupHelper(var fragment: PreferenceFragmentCompat, var context
                             }.withClick(R.id.auto_recovery) {
                                 processAutoRecover(it)
                             })
-                    .contentView(R.layout.dialog_auto_recovery_setting).build()
+                    .contentView(R.layout.dialog_auto_recovery_setting).build().apply {
+                        fixStatusBarStateForPopupShow(fragment.requireActivity(),this)
+                    }
             autoRecoverPopup?.contentView?.findViewById<View>(R.id.container)?.apply {
                 val autoRecover= getValue()
                 val autoRecoveryTextView=this.findViewById<SelectableTextView>(R.id.auto_recovery)

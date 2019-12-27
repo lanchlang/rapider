@@ -10,6 +10,7 @@ import com.rapider.extensions.dp2px
 import com.rapider.extensions.findPreferenceById
 import com.rapider.extensions.getSpString
 import com.rapider.extensions.setSpString
+import com.rapider.utils.fixStatusBarStateForPopupShow
 import com.rapider.views.RoundRectOutlineProvider
 import com.rapider.views.SelectableTextView
 import razerdp.basepopup.BasePopupWindow
@@ -36,7 +37,9 @@ class PreloadPopupHelper(var fragment: PreferenceFragmentCompat, var context:Con
                             }.withClick(R.id.never_open) {
                                 processPreload(it)
                             })
-                    .contentView(R.layout.dialog_pre_load_setting).build()
+                    .contentView(R.layout.dialog_pre_load_setting).build().apply {
+                        fixStatusBarStateForPopupShow(fragment.requireActivity(),this)
+                    }
             preLoadPopup?.contentView?.findViewById<View>(R.id.container)?.apply {
                 val ua=getPreload()
                 val alwaysOpenTextView=this.findViewById<SelectableTextView>(R.id.always_open)

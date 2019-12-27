@@ -250,4 +250,21 @@
     <string name="open">打开</string>
     <string name="pref_key_toolbar_style">pref_key_toolbar_style</string>
     <string name="pref_key_font_size">pref_key_font_size</string>
+    <string name="click_to_login">点击登录</string>
+    <string name="found_rapider">发现Rapider</string>
+    <string name="click_to_set">点击设置</string>
+    <string name="custom_quick_tool">自定义您的快捷工具</string>
+    <string name="bookmark_and_history">书签历史</string>
+    <string name="download">下载</string>
+    <string name="online_disk">网盘</string>
+    <string name="refresh">刷新</string>
+    <string name="private_mode">无痕</string>
+    <string name="add_bookmark">添加书签</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="toolbox">工具箱</string>
+    <string name="find_in_page">页内查找</string>
+    <string name="report_illegal">举报网站</string>
+    <string name="landscape">横屏</string>
+    <string name="translate">翻译</string>
+    <string name="empty" />
 </resources>

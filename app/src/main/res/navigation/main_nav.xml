@@ -3,7 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/browserFragment">
+    app:startDestination="@id/homeFragment">
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rapider.bloc.fragments.home.HomeFragment"
+        android:label="BrowserFragment"
+        tools:layout="@layout/fragment_browser"
+        />
     <action
         android:id="@+id/action_global_browserFragment"
         app:destination="@id/browserFragment"

@@ -31,5 +31,6 @@
     <color name="textColorDisabled">#61000000</color>
     <color name="colorDisabled">@color/textColorDisabled</color>
     <color name="colorFontSizeSampleBg">#F2F3F5</color>
-
+    <color name="iconEnableColor">#333333</color>
+    <color name="iconDisableColor">#D6D6D6</color>
 </resources>

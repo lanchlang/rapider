@@ -10,6 +10,7 @@ import com.rapider.extensions.dp2px
 import com.rapider.extensions.findPreferenceById
 import com.rapider.extensions.getSpString
 import com.rapider.extensions.setSpString
+import com.rapider.utils.fixStatusBarStateForPopupShow
 import com.rapider.views.RoundRectOutlineProvider
 import com.rapider.views.SelectableTextView
 import razerdp.basepopup.BasePopupWindow
@@ -36,7 +37,9 @@ class UaPopupHelper(var fragment: PreferenceFragmentCompat,var context:Context) 
                             }.withClick(R.id.ua_iphone) {
                                 processUa(it)
                             })
-                    .contentView(R.layout.dialog_ua_setting).build()
+                    .contentView(R.layout.dialog_ua_setting).build().apply {
+                        fixStatusBarStateForPopupShow(fragment.requireActivity(),this)
+                    }
             uaPopup?.contentView?.findViewById<View>(R.id.container)?.apply {
                 val ua=getUa()
                 val iphoneUaTextView=this.findViewById<SelectableTextView>(R.id.ua_iphone)

@@ -10,6 +10,7 @@ import com.rapider.extensions.dp2px
 import com.rapider.extensions.findPreferenceById
 import com.rapider.extensions.getSpString
 import com.rapider.extensions.setSpString
+import com.rapider.utils.fixStatusBarStateForPopupShow
 import com.rapider.views.CheckboxTextView
 import com.rapider.views.RoundRectOutlineProvider
 import razerdp.basepopup.BasePopupWindow
@@ -36,7 +37,9 @@ class ToolbarStylePopupHelper(var fragment: PreferenceFragmentCompat, var contex
                             }.withClick(R.id.navigation_style_function_container) {
                                 process(it)
                             })
-                    .contentView(R.layout.dialog_toolbar_mode_setting).build()
+                    .contentView(R.layout.dialog_toolbar_mode_setting).build().apply {
+                        fixStatusBarStateForPopupShow(fragment.requireActivity(),this)
+                    }
             popup?.contentView?.findViewById<View>(R.id.container)?.apply {
                 val value= getValue()
                 val functionStyleTextView=this.findViewById<CheckboxTextView>(R.id.navigation_style_function)

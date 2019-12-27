@@ -1,0 +1,11 @@
+<resources>
+    <string name="pickup">精选</string>
+    <string name="baidu">百度</string>
+    <string name="bilibili">Bilibili</string>
+    <string name="jingdong">京东</string>
+    <string name="taobao">淘宝</string>
+    <string name="tmall">天猫</string>
+    <string name="weibo">微博</string>
+    <string name="weipinhui">唯品会</string>
+    <string name="zhihu">知乎</string>
+</resources>

@@ -10,12 +10,18 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import androidx.preference.CheckBoxPreference
+import com.gyf.immersionbar.BarHide
+import com.gyf.immersionbar.ImmersionBar
 import com.rapider.MainNavDirections
 import com.rapider.R
 import com.rapider.base.SimplePreferenceFragmentCompat
 import com.rapider.extensions.findPreferenceById
+import com.rapider.extensions.getSpBool
 import com.rapider.extensions.getSpInt
 import com.rapider.extensions.getSpString
+import com.rapider.utils.showStatusBar
+import com.rapider.views.CheckboxTextView
 import mozilla.components.support.base.feature.BackHandler
 
 class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
@@ -116,6 +122,13 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
             this.setOnPreferenceClickListener {
                 val destination=MainNavDirections.actionGlobalFontSettingFragment()
                 findNavController().navigate(destination)
+                true
+            }
+        }
+
+        (findPreferenceById(R.string.pref_key_show_status_bar) as? CheckBoxPreference)?.apply{
+            this.setOnPreferenceChangeListener { _, show ->
+                showStatusBar(requireActivity(),show as Boolean)
                 true
             }
         }

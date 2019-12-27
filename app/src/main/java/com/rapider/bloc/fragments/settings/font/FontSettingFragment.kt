@@ -60,19 +60,19 @@ class FontSettingFragment : Fragment() {
     private fun setTextValue(size:Int){
         when(size){
             0->{
-                fontSizeTv.text=getString(R.string.font_small)
+                fontSizeTv.text=getString(R.string.font_smaller)
             }
             1->{
-                fontSizeTv.text=getString(R.string.font_smaller)
+                fontSizeTv.text=getString(R.string.font_small)
             }
             2->{
                 fontSizeTv.text=getString(R.string.font_normal)
             }
             3->{
-                fontSizeTv.text=getString(R.string.font_larger)
+                fontSizeTv.text=getString(R.string.font_large)
             }
             4->{
-                fontSizeTv.text=getString(R.string.font_large)
+                fontSizeTv.text=getString(R.string.font_larger)
             }
         }
     }

@@ -14,6 +14,7 @@ import com.rapider.MainNavDirections
 import com.rapider.R
 import com.rapider.base.SimplePreferenceFragmentCompat
 import com.rapider.extensions.findPreferenceById
+import com.rapider.extensions.getSpInt
 import com.rapider.extensions.getSpString
 import mozilla.components.support.base.feature.BackHandler
 
@@ -95,6 +96,23 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
             }
         }
         findPreferenceById(R.string.pref_key_font_size_settings_display)?.apply {
+            when(requireContext().getSpInt(R.string.pref_key_font_size,2)){
+                0->{
+                    summary=getString(R.string.font_smaller)
+                }
+                1->{
+                    summary=getString(R.string.font_small)
+                }
+                2->{
+                    summary=getString(R.string.font_normal)
+                }
+                3->{
+                    summary=getString(R.string.font_large)
+                }
+                4->{
+                    summary=getString(R.string.font_larger)
+                }
+            }
             this.setOnPreferenceClickListener {
                 val destination=MainNavDirections.actionGlobalFontSettingFragment()
                 findNavController().navigate(destination)

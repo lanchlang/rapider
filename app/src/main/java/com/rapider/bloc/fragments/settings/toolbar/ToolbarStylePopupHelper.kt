@@ -10,15 +10,15 @@ import com.rapider.extensions.dp2px
 import com.rapider.extensions.findPreferenceById
 import com.rapider.extensions.getSpString
 import com.rapider.extensions.setSpString
+import com.rapider.views.CheckboxTextView
 import com.rapider.views.RoundRectOutlineProvider
-import com.rapider.views.SelectableTextView
 import razerdp.basepopup.BasePopupWindow
 import razerdp.basepopup.QuickPopupBuilder
 import razerdp.basepopup.QuickPopupConfig
 
 class ToolbarStylePopupHelper(var fragment: PreferenceFragmentCompat, var context:Context) {
     private var popup: BasePopupWindow?= null
-    lateinit var selectableTextView: SelectableTextView
+    lateinit var checkBoxTextView: CheckboxTextView
     fun showPopup() {
         if (popup==null){
             val slideUpIn= AnimationUtils.loadAnimation(context, R.anim.slide_up_in)
@@ -29,36 +29,36 @@ class ToolbarStylePopupHelper(var fragment: PreferenceFragmentCompat, var contex
                             .gravity(Gravity.BOTTOM)
                             .withShowAnimation(slideUpIn)
                             .withDismissAnimation(slideDownOut)
-                            .withClick(R.id.always_open) {
-                                processPreload(it)
-                            }.withClick(R.id.open_in_local_network) {
-                                processPreload(it)
-                            }.withClick(R.id.never_open) {
-                                processPreload(it)
+                            .withClick(R.id.navigation_style_voice_container) {
+                                process(it)
+                            }.withClick(R.id.navigation_style_light_container) {
+                                process(it)
+                            }.withClick(R.id.navigation_style_function_container) {
+                                process(it)
                             })
-                    .contentView(R.layout.dialog_pre_load_setting).build()
+                    .contentView(R.layout.dialog_toolbar_mode_setting).build()
             popup?.contentView?.findViewById<View>(R.id.container)?.apply {
-                val ua=getPreload()
-                val alwaysOpenTextView=this.findViewById<SelectableTextView>(R.id.always_open)
-                if (ua==alwaysOpenTextView.text){
-                    alwaysOpenTextView.select()
-                    selectableTextView=alwaysOpenTextView
+                val value= getValue()
+                val functionStyleTextView=this.findViewById<CheckboxTextView>(R.id.navigation_style_function)
+                if (value==functionStyleTextView.text){
+                    functionStyleTextView.select()
+                    checkBoxTextView=functionStyleTextView
                 }else{
-                    alwaysOpenTextView.unselect()
+                    functionStyleTextView.unselect()
                 }
-                val openInLocalTextView=this.findViewById<SelectableTextView>(R.id.open_in_local_network)
-                if (ua==openInLocalTextView.text){
-                    openInLocalTextView.select()
-                    selectableTextView=openInLocalTextView
+                val lightStyleTextView=this.findViewById<CheckboxTextView>(R.id.navigation_style_light)
+                if (value==lightStyleTextView.text){
+                    lightStyleTextView.select()
+                    checkBoxTextView=lightStyleTextView
                 }else{
-                    openInLocalTextView.unselect()
+                    lightStyleTextView.unselect()
                 }
-                val neverOpenTextView=this.findViewById<SelectableTextView>(R.id.never_open)
-                if (ua==neverOpenTextView.text){
-                    neverOpenTextView.select()
-                    selectableTextView=neverOpenTextView
+                val voiceStyleTextView=this.findViewById<CheckboxTextView>(R.id.navigation_style_voice)
+                if (value==voiceStyleTextView.text){
+                    voiceStyleTextView.select()
+                    checkBoxTextView=voiceStyleTextView
                 }else{
-                    neverOpenTextView.unselect()
+                    voiceStyleTextView.unselect()
                 }
                 clipToOutline=true
                 outlineProvider= RoundRectOutlineProvider(context.dp2px(18).toFloat())
@@ -66,30 +66,40 @@ class ToolbarStylePopupHelper(var fragment: PreferenceFragmentCompat, var contex
         }
         popup?.showPopupWindow()
     }
-    private fun processPreload(newSelectableTextView: View){
-        if (newSelectableTextView==selectableTextView) {
-            hideUaDialog()
-            return
+    private fun process(container: View){
+        container.findViewById<CheckboxTextView>(R.id.navigation_style_light)?.apply {
+            processSelectTextView(this)
         }
-        selectableTextView.unselect()
-        (newSelectableTextView as SelectableTextView).apply {
-            this.select()
-            selectableTextView=this
-            savePreload(this.text)
-            hideUaDialog()
-            fragment.findPreferenceById(R.string.pref_key_pre_load_display)?.apply {
-                summary=newSelectableTextView.text
+        container.findViewById<CheckboxTextView>(R.id.navigation_style_function)?.apply {
+            processSelectTextView(this)
+        }
+        container.findViewById<CheckboxTextView>(R.id.navigation_style_voice)?.apply {
+            processSelectTextView(this)
+        }
+    }
+    private fun processSelectTextView(newCheckboxTextView: CheckboxTextView){
+        if (newCheckboxTextView==checkBoxTextView){
+            hideDialog()
+            return
+        }else{
+            saveValue(newCheckboxTextView.text)
+            checkBoxTextView.unselect()
+            newCheckboxTextView.select()
+            checkBoxTextView=newCheckboxTextView
+            hideDialog()
+            fragment.findPreferenceById(R.string.pref_key_toolbar_style_display)?.apply {
+                summary=newCheckboxTextView.text
             }
         }
     }
-    private fun hideUaDialog(){
+    private fun hideDialog(){
         popup?.dismiss()
     }
 
-    private  fun getPreload():String{
-        return context.getSpString(R.string.pref_key_pre_load_display, context.getString(R.string.always_open))
+    private  fun getValue():String{
+        return context.getSpString(R.string.pref_key_toolbar_style, context.getString(R.string.navigation_style_function))
     }
-    private fun savePreload(preLoad:String){
-        context.setSpString(R.string.pref_key_pre_load_display,preLoad)
+    private fun saveValue(value:String){
+        context.setSpString(R.string.pref_key_toolbar_style,value)
     }
 }

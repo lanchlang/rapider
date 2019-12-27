@@ -19,4 +19,10 @@
     <string name="navigation_style_voice">语音模式</string>
     <string name="navigation_style_light">轻模式</string>
     <string name="navigation_style_function">功能模式</string>
+    <!--    字体大小-->
+    <string name="font_smaller">小</string>
+    <string name="font_small">偏小</string>
+    <string name="font_normal">标准</string>
+    <string name="font_large">偏大</string>
+    <string name="font_larger">大</string>
 </resources>

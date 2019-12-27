@@ -212,7 +212,7 @@
 
     <string name="close">关闭</string>
 
-    <string name="font_size_sample">拖动该滑块，将文字调整到适合您阅读的大小。点按两次某段落后，显示的文字字少应是这么大。</string>
+    <string name="font_size_sample">今天我寒夜里看雪飘过\n怀着冷却了的心窝飘远方\n风雨里追赶 雾里分不清影踪 \n 天空海阔你与我 可不变</string>
     <string name="font_size">文字大小</string>
     <string name="delete">删除</string>
     <string name="provide_translate">提供翻译</string>
@@ -235,6 +235,7 @@
     <string name="toolbar_fix_at_bottom">固定在底部</string>
     <string name="scroll_up_to_home">上滑回首页</string>
     <string name="toolbar_style_display">网页工具栏样式</string>
+    <string name="toolbar_style_title">网页工具栏样式(仅在网页中生效)</string>
     <string name="open_ad_block">强力广告过滤模式</string>
     <string name="ad_block_rules">已经添加的广告规则</string>
     <string name="forbid_3rd_cookies">阻止第三方Cookie</string>
@@ -247,4 +248,6 @@
     <string name="set_user_agent">设置浏览器标识</string>
     <string name="pref_key_pre_load">pref_key_pre_load</string>
     <string name="open">打开</string>
+    <string name="pref_key_toolbar_style">pref_key_toolbar_style</string>
+    <string name="pref_key_font_size">pref_key_font_size</string>
 </resources>

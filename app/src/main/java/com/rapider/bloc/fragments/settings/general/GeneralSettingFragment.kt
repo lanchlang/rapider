@@ -6,28 +6,16 @@ package com.rapider.bloc.fragments.settings.general
 
 import android.content.Context
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.view.animation.DecelerateInterpolator
-import android.view.animation.TranslateAnimation
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.rapider.MainNavDirections
 import com.rapider.R
 import com.rapider.base.SimplePreferenceFragmentCompat
-import com.rapider.extensions.dp2px
 import com.rapider.extensions.findPreferenceById
 import com.rapider.extensions.getSpString
-import com.rapider.extensions.setSpString
-import com.rapider.views.RoundRectOutlineProvider
-import com.rapider.views.SelectableTextView
 import mozilla.components.support.base.feature.BackHandler
-import razerdp.basepopup.BasePopupWindow
-import razerdp.basepopup.QuickPopupBuilder
-import razerdp.basepopup.QuickPopupConfig
 
 class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
     private var uaPopupHelper:UaPopupHelper?=null
@@ -103,6 +91,13 @@ class GeneralSettingFragment : SimplePreferenceFragmentCompat(), BackHandler {
             }
             this.setOnPreferenceClickListener {
                 autoRecoverPopupHelper?.showAutoRecoverPopup()
+                true
+            }
+        }
+        findPreferenceById(R.string.pref_key_font_size_settings_display)?.apply {
+            this.setOnPreferenceClickListener {
+                val destination=MainNavDirections.actionGlobalFontSettingFragment()
+                findNavController().navigate(destination)
                 true
             }
         }

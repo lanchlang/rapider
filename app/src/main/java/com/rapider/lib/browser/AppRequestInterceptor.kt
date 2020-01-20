@@ -16,9 +16,6 @@ import mozilla.components.concept.engine.request.RequestInterceptor
  * which in turn needs 'core' itself.
  */
 class AppRequestInterceptor(private val context: Context) : RequestInterceptor {
-    override fun onLoadRequest(session: EngineSession, uri: String): RequestInterceptor.InterceptionResponse? {
-        return null
-    }
 
     override fun onErrorRequest(
         session: EngineSession,

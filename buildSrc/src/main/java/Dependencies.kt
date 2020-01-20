@@ -5,14 +5,14 @@
 // Synchronized version numbers for dependencies used by (some) modules
 private object Versions {
     const val kotlin = "1.3.61"
-    const val coroutines = "1.0.1"
-    const val androidx_core="1.0.0"
-    const val androidx_appcompat = "1.0.2"
-    const val androidx_constraintlayout = "1.1.3"
+    const val coroutines = "1.3.3"
+    const val androidx_core="1.2.0-beta01"
+    const val androidx_appcompat = "1.1.0"
+    const val androidx_constraintlayout = "2.0.0-beta4"
     const val androidx_preference = "1.0.0"
-    const val navigation="2.1.0"
-    const val workmanager = "2.0.0"
-    const val google_material = "1.0.0"
+    const val navigation="2.2.0-beta01"
+    const val workmanager = "2.2.0"
+    const val google_material = "1.1.0-beta01"
 
     const val dagger ="2.21"
 
@@ -27,7 +27,7 @@ private object Versions {
     const val base_popup="2.2.1"
     const val android_gradle_plugin = "3.4.1"
 
-    const val mozilla_android_components = "23.0.0" //"+" // Always use the latest snapshot
+    const val mozilla_android_components ="+" // Always use the latest snapshot
 
     const val thirdparty_sentry = "1.7.10"
 
